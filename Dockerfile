@@ -1,10 +1,13 @@
 FROM node
 
-RUN npm install http-server -g
-
-# Mount to current directory into the container
 VOLUME    ["/data"]
 WORKDIR   /data
+ADD       package.json /data
+
+RUN npm install
+RUN npm install phantomjs -g
+ENV PATH $PATH:/data/node_modules/.bin
+
 ADD       . /data
 
 CMD http-server -p $PORT
