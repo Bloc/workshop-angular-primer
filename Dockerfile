@@ -10,4 +10,4 @@ ENV PATH $PATH:/data/node_modules/.bin
 
 ADD       . /data
 
-CMD http-server -p $PORT
+CMD node server.js
