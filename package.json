@@ -2,6 +2,9 @@
   "name": "angular-course",
   "dependencies": {
     "chai": "",
-    "mocha": ""
+    "mocha": "",
+    "karma": "",
+    "protractor": "",
+    ""
   }
 }
