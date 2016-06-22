@@ -3,16 +3,15 @@ var fs        = require('fs');
 var assert    = require('assert');
 var Horseman  = require('node-horseman');
 
-var server  = http.createServer(function (req, res) {
-  var index = fs.readFileSync('index.html', {encoding: "utf8"});
-  res.writeHead(200, {'Content-Type': 'text/html'});
-  res.write(index);
-  res.end();
-}).listen(3000);
-
 describe("angular initialization", function() {
-  beforeEach(function(){
+  before(function(){
     this.horseman = new Horseman();
+    this.server  = http.createServer(function (req, res) {
+      var index = fs.readFileSync('index.html', {encoding: "utf8"});
+      res.writeHead(200, {'Content-Type': 'text/html'});
+      res.write(index);
+      res.end();
+    }).listen(3000);
   });
 
   it("interpolates {{ 5 + 5 }}", function() {
@@ -35,6 +34,6 @@ describe("angular initialization", function() {
 
   after(function() {
     this.horseman.close();
-    server.close();
+    this.server.close();
   });
 })
