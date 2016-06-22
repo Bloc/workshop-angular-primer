@@ -1,6 +1,6 @@
 var assert    = require('chai').assert;
 var Horseman  = require('node-horseman');
-var express = require('express'), app = express(), port = 4000;
+var express   = require('express'), app = express(), port = 4000;
 
 app.use(express.static("."));
 app.listen(port);

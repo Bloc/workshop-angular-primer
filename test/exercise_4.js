@@ -1,11 +1,9 @@
-var express = require('express'), app = express(), port = 4000;
+var assert    = require('chai').assert;
+var Horseman  = require('node-horseman');
+var express   = require('express'), app = express(), port = 4000;
 
 app.use(express.static("."));
 app.listen(port);
-
-var fs        = require('fs');
-var assert    = require('chai').assert;
-var Horseman  = require('node-horseman');
 
 describe("angular app", function() {
   before(function(){
