@@ -1,22 +1,18 @@
-var http      = require('http');
-var fs        = require('fs');
 var assert    = require('assert');
 var Horseman  = require('node-horseman');
+var express   = require('express'), app = express(), port = 4000;
+
+app.use(express.static("."));
+app.listen(port);
 
 describe("angular script", function() {
   before(function(){
     this.horseman = new Horseman();
-    this.server   = http.createServer(function (req, res) {
-      var index = fs.readFileSync('index.html', {encoding: "utf8"});
-      res.writeHead(200, {'Content-Type': 'text/html'});
-      res.write(index);
-      res.end();
-    }).listen(3000);
   });
 
   it("loads the angular library", function() {
     return this.horseman
-      .open('http://localhost:3000')
+      .open('http://localhost:' + port)
       .evaluate(function(){
         return angular;
       })
@@ -27,6 +23,5 @@ describe("angular script", function() {
 
   after(function() {
     this.horseman.close();
-    this.server.close();
   });
 })

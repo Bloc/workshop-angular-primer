@@ -1,22 +1,19 @@
-var http      = require('http');
-var fs        = require('fs');
 var assert    = require('chai').assert;
 var Horseman  = require('node-horseman');
+var express = require('express'), app = express(), port = 4000;
+
+app.use(express.static("."));
+app.listen(port);
+
 
 describe("angular app", function() {
   before(function(){
     this.horseman = new Horseman();
-    this.server   = http.createServer(function (req, res) {
-      var index = fs.readFileSync('index.html', {encoding: "utf8"});
-      res.writeHead(200, {'Content-Type': 'text/html'});
-      res.write(index);
-      res.end();
-    }).listen(3000);
   });
 
-  it("displays a single task", function() {
+  it("displays a single todo", function() {
     return this.horseman
-      .open('http://localhost:3000')
+      .open('http://localhost:' + port)
       .text("ul.tasks li:first")
       .then(function(text) {
         assert.match(text, /Do the thing/);
@@ -25,6 +22,5 @@ describe("angular app", function() {
 
   after(function() {
     this.horseman.close();
-    this.server.close();
   });
 })
