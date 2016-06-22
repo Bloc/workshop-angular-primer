@@ -20,8 +20,4 @@ describe("angular script", function() {
         assert.notDeepEqual(angular, null);
       });
   });
-
-  after(function() {
-    this.horseman.close();
-  });
 })

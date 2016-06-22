@@ -22,9 +22,4 @@ describe("angular app", function() {
         assert.match(text, /Do another thing/);
       });
   });
-
-  after(function() {
-    //this.horseman.close();
-    //this.server.close();
-  });
 })

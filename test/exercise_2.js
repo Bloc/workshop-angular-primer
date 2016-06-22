@@ -18,8 +18,4 @@ describe("angular interpolation", function() {
         assert.match(text, /.+10.+/);
       });
   });
-
-  after(function() {
-    this.horseman.close();
-  });
 })
