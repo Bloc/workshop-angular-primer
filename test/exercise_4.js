@@ -15,7 +15,6 @@ describe("angular app", function() {
   it("displays multiple tasks", function() {
     return this.horseman
       .open('http://localhost:' + port)
-      .screenshot("screenshot.png")
       .text("ul.tasks li")
       .then(function(text) {
         assert.match(text, /Do the thing/);
