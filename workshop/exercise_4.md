@@ -1,7 +1,7 @@
 # Angular Directives: ng-repeat
 
 > Description: Learn how to use your first Angular directive: ng-repeat
-> Command: `mocha test/exercise_4.js --timeout 5000 --reporter ./test/log_formatter.js`
+> Command: `mocha test/exercise_4.js --timeout 5000 --reporter test/log_reporter.js`
 
 Directives are arguably the most powerful feature of Angular. Directives are a way of extending HTML dynamically, and Angular comes with a few directives built in. A common one is `ng-repeat`, which we'll use to show a list of tasks instead of just an individual one.
 

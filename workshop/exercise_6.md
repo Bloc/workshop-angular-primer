@@ -1,7 +1,7 @@
-# Creating New Tasks With ng-model and ng-click
+# Creating New Tasks with ng-model and ng-click
 
 > Description: Using ng-model and ng-click to create new tasks.
-> Command: `mocha test/exercise_6.js --timeout 5000 --reporter ./test/log_formatter.js`
+> Command: `mocha test/exercise_6.js --timeout 5000 --reporter test/log_reporter.js`
 
 To create new tasks, we'll use `ng-model` to bind our input field to an object in our controller. We can set up `ng-model` with:
 

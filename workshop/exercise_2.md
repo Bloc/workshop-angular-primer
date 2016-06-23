@@ -1,7 +1,7 @@
 # Initializing Angular
 
 > Description: Using ng-app to initialize your Angular app.
-> Command: `mocha test/exercise_2.js --timeout 5000 --reporter ./test/log_formatter.js`
+> Command: `mocha test/exercise_2.js --timeout 5000 --reporter test/log_reporter.js`
 
 Angular uses an HTML attribute called `ng-app` to initialize the framework:
 

@@ -1,7 +1,7 @@
 # Angular Controllers
 
 > Description: Set up your first Angular controller
-> Command: `mocha test/exercise_3.js --timeout 5000 --reporter ./test/log_formatter.js`
+> Command: `mocha test/exercise_3.js --timeout 5000 --reporter test/log_reporter.js`
 
 Usually we won't be interpreting just basic arithmetic in the HTML, but actual JavaScript objects containing data. Let's interpret a single task from our todo list with:
 
@@ -40,4 +40,4 @@ The `angular.module` call returns an object for our entire Angular `myApp` app. 
       $scope.task = { name: "Do the thing" }
     });
 
-When we refresh the page, we should see the task name rendered. 
+When we refresh the page, we should see the task name rendered.

@@ -1,7 +1,7 @@
 # Inputs for New Tasks
 
-> Description: ng-model and adding inputs to create new tasks.
-> Command: `mocha test/exercise_5.js --timeout 5000 --reporter ./test/log_formatter.js`
+> Description: Add input fields for creating new tasks.
+> Command: `mocha test/exercise_5.js --timeout 5000 --reporter test/log_reporter.js`
 
 To create a new task, we'll add a label, text field, and submit button to our HTML:
 
