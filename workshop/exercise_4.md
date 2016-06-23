@@ -7,23 +7,27 @@ Directives are arguably the most powerful feature of Angular. Directives are a w
 
 We'll start by defining a list of tasks on our controller's `$scope`:
 
-    myApp = angular.module("myApp", []);
+```
+myApp = angular.module("myApp", []);
 
-    myApp.controller("TaskController", function($scope){
-      $scope.tasks = [
-        { name: "Do the thing" },
-        { name: "Do the other thing" }
-      ];
-    });
+myApp.controller("TaskController", function($scope){
+  $scope.tasks = [
+    { name: "Do the thing" },
+    { name: "Do the other thing" }
+  ];
+});
+```
 
 Our view is currently expecting a single task object. To iterate over each task in the array, we can use `ng-repeat` in the HTML:
 
-    <html ng-app="MyApp">
-      <body>
-        <ul>
-          <li ng-repeat="task in tasks">{{ task.name }}</li>
-        </ul>
-      </body>
-    </html>
+```
+<html ng-app="MyApp">
+  <body>
+    <ul>
+      <li ng-repeat="task in tasks">{{ task.name }}</li>
+    </ul>
+  </body>
+</html>
+```
 
 The `ng-repeat` directive will iterate over each item in the `tasks` array and pass a local variable named `task` to the list element so that we can render it in our mustache brackets. If we refresh the page, we should see both items rendered in the list.
