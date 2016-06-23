@@ -1,13 +1,11 @@
 FROM node
 
-VOLUME    ["/data"]
 WORKDIR   /data
-ADD       package.json /data
+
+ADD package.json .
 
 RUN npm install
-RUN npm install phantomjs -g
-ENV PATH $PATH:/data/node_modules/.bin
 
-ADD       . /data
+ADD . /data
 
 CMD node server.js
