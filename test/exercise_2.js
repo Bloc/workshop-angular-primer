@@ -15,7 +15,7 @@ describe("angular interpolation", function() {
       .open('http://localhost:' + port)
       .text("h1")
       .then(function(text) {
-        assert.match(text, /.+10.+/);
+        assert.match(text, /10/);
       });
   });
 })
