@@ -6,7 +6,7 @@ Create an interactive todo list by learning the basics of AngularJS.
 
 ## Description
 
-HTML and CSS allows you to create and style content, and JavaScript allows your users to interact with this content. But coordinating between these two worlds can be difficult.
+HTML and CSS allow you to create and style content, and JavaScript allows your users to interact with this content. But coordinating between these two worlds can be difficult.
 
 AngularJS is a very popular JavaScript web framework that helps you coordinate information between these languages. It adds additional HTML vocabulary to your web app, which makes coordinating with JavaScript faster, simpler, and easier to understand.
 
