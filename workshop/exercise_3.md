@@ -1,7 +1,7 @@
 > Description: Set up your first Angular controller
 > Command: `mocha test/exercise_3.js --timeout 5000 --reporter test/log_reporter.js`
 
-Although AngularJS can interpret arithmetic in HTML, it's typically used to display JavaScript objects containing data.
+Although AngularJS can print strings to HTML, it's typically used to display JavaScript objects containing data.
 
 ### Objectives
 

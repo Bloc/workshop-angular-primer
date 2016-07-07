@@ -100,3 +100,5 @@ In your HTML…
 
 - Add the `ng-model` attribute to bind the text input field to `newTask.name`
 - Add the `ng-click` attribute so the submit button calls the `addTask` function
+
+Congratulations! You now have an interactive, dynamic todo list web app.
