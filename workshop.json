@@ -1,3 +1,3 @@
 {
-  "excludeItems": ["test", "workshop", "Dockerfile", "package.json", "server.js"]
+  "excludeItems": ["test", "workshop", "Dockerfile", "package.json", "README.md", "LICENSE.md", "server.js"]
 }
